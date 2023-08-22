@@ -78,7 +78,7 @@ function App() {
     getAllUsers();
   }, []);
   return (
-    <main className="bg-gray-300/50  ">
+    <main className="bg-gray-300/50 min-h-screen ">
       <header className="fixed top-0 left-0 w-full bg-white p-4 px-8 font-fira-Code shadow-md z-50">
         <div className="flex justify-between items-center min-w-[260px] sm:mx-auto sm:w-[500px]">
           <h1 className="text-[30px]">Users</h1>
