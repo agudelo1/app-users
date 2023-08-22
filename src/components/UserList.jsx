@@ -8,7 +8,7 @@ const UserList = ({ users, deleteUser, handleClickUpdateUser }) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   // Cantidad de residentes por pagina, yo decido
-  const USERS_PER_PAGE = 10;
+  const USERS_PER_PAGE = 12;
 
   // cantidad total de paginas
   const totalPages = Math.ceil(users.length / USERS_PER_PAGE);

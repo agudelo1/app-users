@@ -25,6 +25,12 @@ function App() {
       .post(BASE_URL + "users/", newUser)
       .then(() => {
         getAllUsers();
+        Swal.fire({
+          icon: "success",
+          title: "User created successfully",
+          showConfirmButton: false,
+          timer: 1000,
+        });
         setisShowModal(!isShowModal);
         reset(EMPTY_FORM_VALUES);
       })
@@ -37,6 +43,12 @@ function App() {
       .then(() => {
         getAllUsers();
         setisShowModal(false);
+        Swal.fire({
+          icon: "success",
+          title: "User updated successfully",
+          showConfirmButton: false,
+          timer: 1000,
+        });
         reset(EMPTY_FORM_VALUES);
         setIsUserToUpdate(null);
       })
@@ -90,6 +102,7 @@ function App() {
           </button>
         </div>
       </header>
+
       <main className=" mt-16 grid gap-4 py-8 font-fira-Cod">
         <ModalForm
           isShowModal={isShowModal}

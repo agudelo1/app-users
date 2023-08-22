@@ -18,6 +18,8 @@ const ModalForm = ({
   } = useForm();
 
   const submit = (data) => {
+    data.image_url = null;
+
     if (isUserToUpdate) {
       updateUser(data, reset);
     } else {
@@ -45,7 +47,7 @@ const ModalForm = ({
     >
       <form
         onSubmit={handleSubmit(submit)}
-        className="bg-white grid gap-4 p-2 rounded-md relative sm:w-[400px] sm:h-[500px] sm:p-8 font-fira-Code"
+        className="bg-white grid gap-4 p-4   rounded-md relative sm:w-[400px] sm:h-[550px] sm:p-8 font-fira-Code"
       >
         <button
           type="button"
@@ -163,8 +165,16 @@ const ModalForm = ({
             className="px-[5px] outline-none border-[1px] border-black"
             id="birthday"
             type="date"
-            {...register("birthday")}
+            {...register("birthday", {
+              required: {
+                value: true,
+                message: "This field is required",
+              },
+            })}
           />
+          {errors.birthday && (
+            <p className="text-red-500 text-xs">{errors.birthday.message}</p>
+          )}
         </div>
         <button className="rounded-sm bg-indigo-700 text-white p-2 sm:w-[200px] sm:mx-auto">
           {isUserToUpdate ? "Save changes" : "Create user"}
