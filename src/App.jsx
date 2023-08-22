@@ -119,7 +119,7 @@ function App() {
             handleClickUpdateUser={handleClickUpdateUser}
           />
         ) : (
-          <div className=" font-fira-Code flex flex-col gap-10 justify-center items-center">
+          <div className="min-w-[315px] font-fira-Code flex flex-col gap-10 justify-center items-center">
             <h2 className="  text-xl flex items-center gap-2 ">
               <i className="bx bx-user-circle"></i>Add users
             </h2>

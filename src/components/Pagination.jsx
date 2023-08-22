@@ -4,7 +4,7 @@ const Pagination = ({ pages, setCurrentPage, currentPage }) => {
       {pages.map((page) => (
         <li
           className={`cursor-pointer p-2 px-4 rounded-md ${
-            currentPage === page && "text-white bg-[#062226]"
+            currentPage === page && "text-white font-fira-Code  bg-indigo-600"
           }`}
           onClick={() => setCurrentPage(page)}
           key={page}
