@@ -10,11 +10,11 @@ const UserCard = ({ user, deleteUser, handleClickUpdateUser }) => {
 
       <hr className="border-[1px] border-[#E5E5E5]" />
       <ul className="p-2">
-        <li className="grid gap-1 py-2  ">
-          <span className="flex items-center gap-1">
+        <li className="grid gap-1 py-2">
+          <span className="flex items-center gap-1 ">
             <i className="bx bx-envelope"></i>Email
           </span>
-          <span className="text-sm ">{user.email}</span>
+          <span className="text-sm break-all line-clamp-1 ">{user.email}</span>
         </li>
         <li className="grid gap-1">
           <span className="flex items-center gap-1">

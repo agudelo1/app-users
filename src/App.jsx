@@ -112,11 +112,20 @@ function App() {
           setisShowModal={setisShowModal}
           setIsUserToUpdate={setIsUserToUpdate}
         />
-        <UserList
-          users={users}
-          deleteUser={deleteUser}
-          handleClickUpdateUser={handleClickUpdateUser}
-        />
+        {users.length > 0 ? (
+          <UserList
+            users={users}
+            deleteUser={deleteUser}
+            handleClickUpdateUser={handleClickUpdateUser}
+          />
+        ) : (
+          <div className=" font-fira-Code flex flex-col gap-10 justify-center items-center">
+            <h2 className="  text-xl flex items-center gap-2 ">
+              <i className="bx bx-user-circle"></i>Add users
+            </h2>
+            <p>Start now to create users</p>
+          </div>
+        )}
       </main>
     </main>
   );
