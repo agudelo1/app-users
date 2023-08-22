@@ -29,8 +29,8 @@ const UserList = ({ users, deleteUser, handleClickUpdateUser }) => {
   }, [users]);
 
   return (
-    <section className="flex flex-col mx-auto  w-full max-w-[1300px]  ">
-      <section className="grid grid-rows-[auto,auto] gap-8 items-center justify-center p-4 min-[640px]:grid-cols-[auto,auto] ">
+    <section className="flex flex-col mx-auto  w-full max-w-[1024px]  ">
+      <section className="grid grid-rows-[auto,auto] gap-6 items-center justify-center p-4 min-[640px]:grid-cols-[auto,auto]  min-[880px]:grid-cols-[auto,auto,auto] ">
         {usersInPage.map((user) => (
           <UserCard
             key={user.id}
